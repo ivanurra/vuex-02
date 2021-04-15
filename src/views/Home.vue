@@ -5,16 +5,18 @@
     :style="counterColor"
     >{{title}}: {{ counter }}</h3>
     <button @click="increaseActionJackson">+ Increase</button>
+    <Btn-decrease />
   </div>
 </template>
 
 <script>
 import {mapState, mapMutations, mapActions} from 'vuex'
+import BtnDecrease from '../components/BtnDecrease.vue'
 
 export default {
   name: 'Home',
   components: {
-
+    BtnDecrease
   },
   data() {
     return {

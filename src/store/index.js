@@ -8,10 +8,16 @@ export default createStore({
     increase(state) {
       state.counter++;
     },
+    decrease(state) {
+      state.counter--;
+    }
   },
   actions: {
     increaseActionJackson({commit}) {
       commit('increase')
+    },
+    decreaseActionJackson({commit}) {
+      commit('decrease')
     }
   },
   modules: {
