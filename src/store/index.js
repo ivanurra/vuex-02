@@ -5,19 +5,26 @@ export default createStore({
     counter: 1
   },
   mutations: {
-    increase(state) {
-      state.counter++;
+    increase(state, payload) {
+      state.counter = state.counter + payload
     },
     decrease(state, payload) {
       state.counter = state.counter - payload
     }
   },
   actions: {
-    increaseActionJackson({commit}) {
-      commit('increase')
+    increaseActionJackson({ commit }) {
+      commit('increase', 10)
     },
-    decreaseActionJackson({commit}, number) {
+    decreaseActionJackson({ commit }, number) {
       commit('decrease', number)
+    },
+    btnAction({ commit }, object) {
+      if (object.status) {
+        commit('increase', object.number)
+      } else {
+        commit('decrease', object.number)
+      }
     }
   },
   modules: {

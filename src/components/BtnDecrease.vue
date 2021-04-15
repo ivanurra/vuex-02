@@ -1,5 +1,5 @@
 <template>
-  <button @click="decreaseActionJackson(50)">- Decrease</button>
+  <button @click="decreaseActionJackson(50)">Decrease</button>
 </template>
 
 <script>
