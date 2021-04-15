@@ -4,12 +4,12 @@
     <h3
     :style="counterColor"
     >{{title}}: {{ counter }}</h3>
-    <button @click="increase">+ Increase</button>
+    <button @click="increaseActionJackson">+ Increase</button>
   </div>
 </template>
 
 <script>
-import {mapState, mapMutations} from 'vuex'
+import {mapState, mapMutations, mapActions} from 'vuex'
 
 export default {
   name: 'Home',
@@ -28,7 +28,8 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['increase'])
+    ...mapMutations(['increase']),
+    ...mapActions([`increaseActionJackson`])
   }
 }
 </script>

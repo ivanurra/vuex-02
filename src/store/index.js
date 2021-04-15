@@ -10,6 +10,9 @@ export default createStore({
     },
   },
   actions: {
+    increaseActionJackson({commit}) {
+      commit('increase')
+    }
   },
   modules: {
   }
