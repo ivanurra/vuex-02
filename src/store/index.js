@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    counter: 100
+    counter: 1
   },
   mutations: {
   },

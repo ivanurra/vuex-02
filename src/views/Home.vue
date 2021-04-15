@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <!-- <h3>Counter: {{ $store.state.counter }}</h3> -->
-    <h3>Counter: {{ counter }}</h3>
+    <h3
+    :style="counterColor"
+    >{{title}}: {{ counter }}</h3>
   </div>
 </template>
 
@@ -13,8 +15,16 @@ export default {
   components: {
 
   },
+  data() {
+    return {
+      title: 'Counter'
+    }
+  },
   computed: {
-    ...mapState([`counter`])
+    ...mapState([`counter`]),
+    counterColor() {
+      return [this.counter > 100 ? {'color': 'green'} : {'color': 'red'}]
+    }
   }
 }
 </script>
