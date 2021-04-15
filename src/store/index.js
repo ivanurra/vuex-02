@@ -5,6 +5,9 @@ export default createStore({
     counter: 1
   },
   mutations: {
+    increase(state) {
+      state.counter++;
+    },
   },
   actions: {
   },
