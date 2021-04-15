@@ -6,17 +6,22 @@
     >{{title}}: {{ counter }}</h3>
     <button @click="increaseActionJackson">+ Increase</button>
     <Btn-decrease />
+    <br/>
+    <br/>
+    <Action-btn :status="true" />
   </div>
 </template>
 
 <script>
 import {mapState, mapMutations, mapActions} from 'vuex'
+import ActionBtn from '../components/ActionBtn.vue'
 import BtnDecrease from '../components/BtnDecrease.vue'
 
 export default {
   name: 'Home',
   components: {
-    BtnDecrease
+    BtnDecrease,
+    ActionBtn
   },
   data() {
     return {
